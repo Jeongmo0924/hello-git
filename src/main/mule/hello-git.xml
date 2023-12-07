@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="hello-gitFlow" doc:id="3df6618e-6914-4177-86eb-b4c819c81580" >
 		<http:listener doc:name="Listener" doc:id="92fde177-9562-4d6f-ba22-7513c046fa47" config-ref="HTTP_Listener_config" path="/hg"/>
-		<set-payload value='#["Hello Git!"]' doc:name="Set Payload" doc:id="d3b9b219-6318-405f-8788-a6a5e8d27cac" />
+		<set-payload value='#["Hello Git! How are you?"]' doc:name="Set Payload" doc:id="d3b9b219-6318-405f-8788-a6a5e8d27cac" />
 		<logger level="INFO" doc:name="Logger" doc:id="7a5b3c23-db8e-48db-afbe-476bb0f36a16" message="#[payload]"/>
 	</flow>
 </mule>
