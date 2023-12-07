@@ -11,5 +11,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<http:listener doc:name="Listener" doc:id="92fde177-9562-4d6f-ba22-7513c046fa47" config-ref="HTTP_Listener_config" path="/hg"/>
 		<set-payload value='#["Hello Git! How are you?"]' doc:name="Set Payload" doc:id="d3b9b219-6318-405f-8788-a6a5e8d27cac" />
 		<logger level="INFO" doc:name="Logger" doc:id="7a5b3c23-db8e-48db-afbe-476bb0f36a16" message="#[payload]"/>
+		<set-variable value="메롱" doc:name="Set Variable" doc:id="bd01a3e8-23f7-44e9-bc4a-c13ecbea4821" variableName="test"/>
+		<logger level="INFO" doc:name="Logger" doc:id="645eb8ab-d8f4-4569-bc81-4337aab3146a" message="#[vars.test]"/>
 	</flow>
 </mule>
